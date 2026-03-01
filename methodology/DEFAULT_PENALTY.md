@@ -18,17 +18,17 @@ Every IPI certification anchored on the [EBSI Blockchain](../Technical-Stack/BLO
 ---
 
 ## 3. The "Worst-in-Class" Default Penalty
-If a product's IPI certification expires or if a manufacturer refuses to provide primary data, the **Default Penalty** is automatically applied:
+If a product's IPI certification expires or if a manufacturer refuses to provide primary data, the **Default Penalty** is automatically applied.
 
 ### 3.1. Calculation Logic
-The system queries the [EU EF Database](https://eplca.jrc.ec.europa.eu) for the specific product category (PEFCR). 
-*   It identifies the **top 10% most polluting actors** in that category.
-*   The expired product is assigned the **90th percentile score + a 15% administrative Malus**.
+In the current Protocol version (v1.0.0-beta), if an IPI certification expires or data is missing:
+*   **The Penalty:** A flat **+50% multiplier (1.5 coefficient)** is applied to the reference benchmark.
+*   **Future Roadmap:** Integration of a dynamic "Worst-in-Class" (90th percentile + 15%) model as more sector data becomes available in the [EU EF Database](https://eplca.jrc.ec.europa.eu).
 
 ### 3.2. Fiscal Consequence
 An expired IPI instantly shifts the product into the **highest VAT bracket** defined by the sovereign nation:
-*   **Active IPI (65):** 5% VAT (Bonus).
-*   **Expired IPI (Default 150):** 25%+ VAT (Maximum Malus).
+*   **Active IPI (65):** 5% VAT (example Bonus).
+*   **Expired IPI (Default 150):** 25%+ VAT (example Maximum Malus).
 
 ---
 
