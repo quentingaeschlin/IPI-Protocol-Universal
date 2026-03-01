@@ -61,7 +61,7 @@ Sovereign states (e.g., [DG TAXUD](https://taxation-customs.ec.europa.eu) member
 *   **Pollution Surcharge:** A 25%+ VAT for Tier-C IPI products.
 
 ### 5.2. Social Justice & Revenue Neutrality
-ideally, the "Malus" revenue collected from high-pollution luxury or non-essential goods directly funds the "Bonus" for low-impact essentials. This ensures the total cost of a standard consumer basket remains stable while shifting consumption patterns.
+Ideally, the "Malus" revenue collected from high-pollution luxury or non-essential goods directly funds the "Bonus" for low-impact essentials. This ensures the total cost of a standard consumer basket remains stable while shifting consumption patterns.
 
 ---
 
