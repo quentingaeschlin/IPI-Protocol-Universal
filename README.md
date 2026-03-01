@@ -37,6 +37,10 @@ The IPI is a numerical coefficient where **100 is the Neutral Reference** for a 
     ```bash
     python tests/ipi_engine.py
     ```
+## 🚀 Quick Start (Demo)
+To see the IPI Protocol in action and compare a sustainable product vs. a polluting one:
+1. `pip install -r requirements.txt`
+2. `python main.py`
 
 ## 🤝 Contributing
 We need environmental scientists, blockchain architects, and tax lawyers. 
