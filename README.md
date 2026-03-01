@@ -25,10 +25,10 @@ The IPI is a numerical coefficient where **100 is the Neutral Reference** for a 
     *   **IPI > 120:** Pollution Surcharge (Malus).
 
 ## 📂 Repository Structure
-*   [`/Methodology`](Methodology/): The algorithm converting 16 PEF indicators into a single IPI score.
-*   [`/Technical-Stack`](Technical-Stack/): Smart contracts for EBSI and API definitions for DPP.
-*   [`/Fiscal-Models`](Fiscal-Models/): Revenue-neutral simulations for Ministry of Finance adoption.
-*   [`/Case-Studies`](Case-Studies/): Real-world simulations (Textiles, Electronics, Mining).
+*   [`/methodology`](methodology/): The algorithm converting 16 PEF indicators into a single IPI score.
+*   [`/technical-stack`](technical-stack/): Smart contracts for EBSI and API definitions for DPP.
+*   [`/fiscal-models`](fiscal-models/): Revenue-neutral simulations for Ministry of Finance adoption.
+*   [`/case-studies`](case-studies/): Real-world simulations (Textiles, Electronics, Mining).
 
 ## 🚀 Get Started
 1.  **Read the [WHITEPAPER.md](WHITEPAPER.md)** for the full economic and political argument.
