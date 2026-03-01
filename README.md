@@ -1,6 +1,6 @@
 # 🌍 Project IPI: The Induced Pollution Index Protocol
 > **Universal Open-Source Standard for Environmental Fiscality | Version 1.0.0-beta**
-> *Launched: March 1st, 2026 — The Day the Measuring Rod was Born.*
+> *Launched: March 1st, 2026 — The Day the Corporate Measuring Rod was Born.*
 
 ---
 
