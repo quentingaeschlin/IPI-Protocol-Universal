@@ -76,3 +76,6 @@ The IPI engine expects a machine-readable input from the [Digital Product Passpo
   "data_quality": "verified_primary",
   "ipi_output": 84.2
 }
+
+## 🚀 Future Roadmap: Live LCA Integration
+- [ ] **Dynamic Normalization:** Integrate the [EU JRC EF Database API]( https://eplca.jrc.ec.europa.eu/ ) to update normalization factors ($N_i$) in real-time, ensuring the "Base 100" remains synchronized with global technical progress.

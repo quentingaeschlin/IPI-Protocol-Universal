@@ -30,5 +30,3 @@ Transparency is the best antidote to corruption and lobbying. By open-sourcing t
 ### 6. Is the IPI compatible with WTO rules?
 **Yes.** Because the IPI applies the same scientific criteria to both domestic and imported goods based on **actual verified performance**, it is non-discriminatory and data-driven, aligning with the principles of the [Carbon Border Adjustment Mechanism (CBAM)](https://taxation-customs.ec.europa.eu).
 
----
-**Next Milestone:** Integrating real-time [LCA databases](https://eplca.jrc.ec.europa.eu) into the automated FAQ response bot.

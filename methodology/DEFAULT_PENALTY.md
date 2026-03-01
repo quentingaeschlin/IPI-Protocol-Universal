@@ -49,3 +49,7 @@ The Default Penalty prevents "Data Camping," where an actor relies on an old, fa
 ## 🚀 Next Milestones
 - [ ] **Action:** Develop the **"Expiration Oracle"**—a service that monitors blockchain timestamps and updates the IPI status for tax authorities.
 - [ ] **Action:** Define the **Grace Period** exceptions for SMEs experiencing supply chain force majeure.
+
+## 🚀 Future Roadmap: The Dynamic "Worst-in-Class" Oracle
+- [ ] **Live Market Scanning:** Implement a data-crawler for verified LCA databases to automatically identify the 90th percentile of pollution for each product category, replacing the static 1.5 multiplier with a real-time "Market Malus."
+
