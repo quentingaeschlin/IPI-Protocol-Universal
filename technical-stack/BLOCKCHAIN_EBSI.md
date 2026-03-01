@@ -50,4 +50,4 @@ We protect industrial secrets while ensuring transparency:
 *   **Interoperability:** Designed to communicate with the [Digital Product Passport (DPP)](https://commission.europa.eu) across all 27 Member States.
 
 ---
-**Action:** Implement the first **Solidity/Rust prototype** for the IPI-Inheritance contract in `/Technical-Stack/contracts/`.
+- [ ]  **Action:** Implement the first **Solidity/Rust prototype** for the IPI-Inheritance contract in `/Technical-Stack/contracts/`.
