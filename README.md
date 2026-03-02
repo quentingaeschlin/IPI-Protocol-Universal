@@ -43,10 +43,10 @@ To see the IPI Protocol in action and compare a sustainable product vs. a pollut
 2. `python main.py`
 
 ## 🤝 Contributing
-We need environmental scientists, blockchain architects, and tax lawyers. 
+We need engineers, developpers, environmental scientists, blockchain architects, and tax lawyers. 
 Please review our [CONTRIBUTING.md](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 *"The era of voluntary green claims is over. The era of verified fiscal accountability begins today."*
 
-[⭐ Star this repo to signal the European Commission that Smart Taxation is ready.](https://github.com)
+[⭐ Star this repo to signal the European Commission that Smart Taxation is ready.](https://github.com/quentingaeschlin/IPI-Protocol-Universal/)
