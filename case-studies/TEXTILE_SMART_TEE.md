@@ -48,7 +48,13 @@ The IPI Protocol rewards products designed to last.
 
 ---
 
-## 5. Conclusion: Protecting the European Textile Industry
+## 5. Reproductibility
+You can verify these results by running:
+python main.py --data data/case_study_textile.json
+
+---
+
+## 6. Conclusion: Protecting the European Textile Industry
 The IPI Protocol acts as a natural shield for European SMEs. By forcing ultra-fast fashion actors to either **disclose their true impact** (and pay the malus) or **improve their supply chain**, the IPI levels the playing field for local, high-quality manufacturers who already invest in sustainability.
 
 ---

@@ -1,0 +1,49 @@
+{
+  "protocol_version": "1.0.0-beta",
+  "metadata": {
+    "scenario_name": "Smart T-Shirt Battle",
+    "industry_sector": "Textile",
+    "country_context": "European Union",
+    "date": "2026-03-02"
+  },
+  "products": [
+    {
+      "name": "Circular-Local T-Shirt",
+      "base_price_ht": 25.0,
+    "functional_unit": 80, 
+    "unit_type": "number_of_wears",
+      "dqr_type": "primary",
+      "impacts": {
+        "climate_change": 0.3,
+        "water_use": 0.2,
+        "resource_use_minerals_metals": 0.0001,
+        "land_use": 0.1,
+        "acidification": 0.05,
+        "particulate_matter": 0.02
+      }
+    },
+    {
+      "name": "Linear-Global T-Shirt",
+      "base_price_ht": 10.0,
+        "functional_unit": 80, 
+        "unit_type": "number_of_wears",
+      "dqr_type": "secondary",
+      "impacts": {
+        "climate_change": 0.8,
+        "water_use": 0.6,
+        "resource_use_minerals_metals": 0.0005,
+        "land_use": 0.4,
+        "acidification": 0.2,
+        "particulate_matter": 0.1
+      }
+    }
+  ],
+  "fiscal_config": {
+    "standard_vat": 0.20,
+    "tax_bins": [
+      {"threshold": 80.0, "rate": 0.055},
+      {"threshold": 110.0, "rate": 0.20},
+      {"threshold": 1000.0, "rate": 0.25}
+    ]
+  }
+}

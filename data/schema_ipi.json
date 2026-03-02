@@ -1,0 +1,32 @@
+{
+  "protocol_version": "1.0.0-beta",
+  "metadata": {
+    "scenario_name": "STRING",
+    "industry_sector": "STRING",
+    "country_context": "STRING",
+    "date": "YYYY-MM-DD"
+  },
+  "products": [
+    {
+      "name": "STRING",
+      "base_price_ht": "FLOAT",
+       "functional_unit": "FLOAT", 
+        "unit_type": "STRING",
+      "dqr_type": "primary | secondary | default",
+      "impacts": {
+        "climate_change": "FLOAT",
+        "water_use": "FLOAT",
+        "resource_use_minerals_metals": "FLOAT",
+        "land_use": "FLOAT",
+        "acidification": "FLOAT",
+        "particulate_matter": "FLOAT"
+      }
+    }
+  ],
+  "fiscal_config": {
+    "standard_vat": "FLOAT",
+    "tax_bins": [
+      {"threshold": "FLOAT", "rate": "FLOAT"}
+    ]
+  }
+}

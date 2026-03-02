@@ -1,29 +1,41 @@
 import pytest
+import json
 from src.ipi_calculator import IPICalculator
 from src.vat_bridge import VATBridge
 
-def test_full_protocol_chain():
+def test_full_protocol_integration_from_json():
     """
-    Test the full chain: Environmental Impact -> IPI Score -> VAT Bin -> Final Price.
-    Scenario: A high-efficiency textile product.
+    Test the full chain using the standardized JSON format and functional Unit.
+    Scenario: Circular-Local T-Shirt (High durability/functional unit).
     """
+    # 1. Load the unified JSON data
+    json_path = "data/case_study_textile.json"
+    with open(json_path, 'r') as f:
+        data = json.load(f)
+    
+    # 2. Extract the high-performance product
+    product = data["products"][0] 
+    assert product["name"] == "Circular-Local T-Shirt"
+    assert "functional_unit" in product
+    
+    # 3. Initialize Engines
     calc = IPICalculator()
-    # Define primary impacts (Low impact product)
-    impacts = {
-        "climate_change": 0.4, 
-        "water_use": 0.2,
-        "resource_use_minerals_metals": 0.0001
-    }
+    bridge = VATBridge(bins=data["fiscal_config"]["tax_bins"])
     
-    # 1. Calculate IPI (Should be < 80)
-    ipi_score = calc.calculate(impacts, dqr="primary")
-    assert ipi_score < 80.0
+    # 4. Verification of the "functional-Unit logic
+    # The IPI must be calculated PER functional UNIT(e.g., per wear)
+    ipi_score = calc.calculate(
+        product["impacts"], 
+        functional_unit=product["functional_unit"], 
+        dqr=product["dqr_type"]
+    )
     
-    # 2. Bridge to Fiscality (Should fall in the 5% VAT bin)
-    bridge = VATBridge() # Using default bins (< 80 = 5%)
+    # 5. Fiscal result
     vat_rate = bridge.get_vat_by_bin(ipi_score)
-    assert vat_rate == 0.05
+    final_price = bridge.get_final_price(product["base_price_ht"], ipi_score)
     
-    # 3. Final Retail Price Check
-    final_price = bridge.get_final_price(price_ht=100.0, ipi_score=ipi_score)
-    assert final_price == 105.0
+    # Assertions: 
+    # High durability (80 wears) should result in a very low IPI
+    assert ipi_score < 50.0 
+    assert vat_rate == 0.055  # Should fall into the sustainable bin
+    assert final_price == pytest.approx(25.0 * 1.055, abs=0.01)

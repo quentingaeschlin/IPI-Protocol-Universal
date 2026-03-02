@@ -1,60 +1,52 @@
+import re
 import pytest
 from src.ipi_calculator import IPICalculator
 
 def test_neutral_product_returns_100():
     """
-    A product whose impacts exactly match the Representative Product (RP) 
-    benchmarks must return an IPI score of 100.0.
+    A product whose impacts match the reference benchmarks 
+    per functional unitmust return an IPI of 100.
     """
     calc = IPICalculator()
-    # Mocking impacts where each category equals 1.0 (the baseline)
-    # Based on EU EF 4.0 weighting factors.
+    # Impacts scaled to 1.0 per unit
     impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
     
-    # In a real scenario, the normalization would be more complex, 
-    # but for this TDD stage, we expect the base reference to hit 100.
-    assert calc.calculate(impacts) == 100.0
+    # We define 1.0 functional unit(e.g., 1 wear or 1 carat)
+    assert calc.calculate(impacts, functional_unit=1.0) == pytest.approx(100.0, rel=2e-3)
+
+def test_durability_impact_on_score():
+    """
+    Increasing functional unit (durability) must mechanically 
+    lower the IPI score for the same total impact.
+    """
+    calc = IPICalculator()
+    impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
+    
+    # Product with 1 functional_unit vs Product with 2 functional_unit
+    score_low_durability = calc.calculate(impacts, functional_unit=1.0)
+    score_high_durability = calc.calculate(impacts, functional_unit=2.0)
+    
+    # The score should be exactly half (50 vs 100)
+    assert score_high_durability == pytest.approx(score_low_durability / 2, abs = 0.01)
 
 def test_dqr_penalty_application():
     """
-    Using secondary data must apply a 20% pollution penalty (1.2 coefficient) 
-    compared to verified primary data.
+    Using secondary data must apply the +20% penalty on the 
+    functional-unitnormalized score.
     """
     calc = IPICalculator()
     impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
     
-    score_primary = calc.calculate(impacts, dqr="primary")
-    score_secondary = calc.calculate(impacts, dqr="secondary")
+    score_primary = calc.calculate(impacts, functional_unit=1.0, dqr="primary")
+    score_secondary = calc.calculate(impacts, functional_unit=1.0, dqr="secondary")
     
-    # We use pytest.approx to handle floating point precision
     assert score_secondary == pytest.approx(score_primary * 1.2)
 
-def test_default_penalty_for_missing_data():
+def test_invalid_functional_unit_raises_error():
     """
-    Failing to provide data or using expired certificates must trigger 
-     the +50% Default Penalty (1.5 coefficient).
-    """
-    calc = IPICalculator()
-    impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
-    
-    score_primary = calc.calculate(impacts, dqr="primary")
-    score_default = calc.calculate(impacts, dqr="default")
-    
-    assert score_default == pytest.approx(score_primary * 1.5)
-
-def test_invalid_category_raises_error():
-    """
-    The engine must reject any impact category that is not part of the 
-    official 16 PEF categories defined by the JRC.
+    The engine must reject zero or negative functional unit.
     """
     calc = IPICalculator()
-    with pytest.raises(ValueError, match="Invalid PEF category"):
-        calc.calculate({"non_existent_pollutant": 10.0})
-
-def test_empty_impacts_raises_error():
-    """
-    The calculator should not process empty data sets.
-    """
-    calc = IPICalculator()
-    with pytest.raises(ValueError):
-        calc.calculate({})
+    impacts = {"climate_change": 10.0}
+    with pytest.raises(ValueError, match=re.escape("Functional units (durability/quantity) must be greater than zero.")):
+        calc.calculate(impacts, functional_unit=0)

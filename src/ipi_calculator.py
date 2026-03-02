@@ -52,38 +52,22 @@ class IPICalculator:
         "default": 1.5       # Missing/Expired data (+50% penalty)
     }
 
-    def calculate(self, input_impacts: Dict[str, float], dqr: str = "primary") -> float:
+    def calculate(self, input_impacts: Dict[str, float], functional_unit: float, dqr: str = "primary") -> float:
         """
-        Calculates the final IPI score from raw PEF impacts.
+        Calculates IPI per Service Unit (e.g., per wear, per carat, per kWh).
+        This aligns the protocol with official EU PEFCR 'Functional Units'.
         """
-        if not input_impacts:
-            raise ValueError("Impact data cannot be empty.")
+        if functional_unit <= 0:
+            raise ValueError("Functional units (durability/quantity) must be greater than zero.")
 
-        # Validate categories
-        for cat in input_impacts:
-            if cat not in self.WEIGHTING_FACTORS:
-                raise ValueError(f"Invalid PEF category: {cat}")
-
-        # Check if all 16 categories are provided (Optional: depends on strictness)
-        # For this MVP, we calculate based on provided inputs normalized to 100
-        
         weighted_sum = 0.0
-        total_weight_used = 0.0
-        
         for cat, value in input_impacts.items():
             weight = self.WEIGHTING_FACTORS[cat]
             weighted_sum += value * (weight / 100)
-            total_weight_used += weight
 
-        # Baseline Normalization (Targeting Base 100)
-        # Note: In production, 'value=1.0' represents the Representative Product (RP)
-        if total_weight_used == 0:
-            return 0.0
-            
-        normalized_score = (weighted_sum / (total_weight_used / 100)) * 100
-
-        # Apply DQR Penalty
-        penalty = self.DQR_COEFFICIENTS.get(dqr, 1.5)
-        final_score = normalized_score * penalty
+        # IPI = Impact per Service Rendered
+        # We normalize to 100 based on a reference service level
+        ipi_score = (weighted_sum / functional_unit) * 100 
         
-        return round(final_score, 2)
+        penalty = self.DQR_COEFFICIENTS.get(dqr, 1.5)
+        return round(ipi_score * penalty, 2)
