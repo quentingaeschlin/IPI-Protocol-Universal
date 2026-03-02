@@ -10,15 +10,50 @@ The **Induced Pollution Index (IPI)** is a single-score aggregation of the 16 en
 ---
 
 ## 2. The Multi-Criteria Formula
-The final IPI score ($S_{IPI}$) is calculated by summing the weighted and normalized results of the 16 impact categories ($i$):
+## 🧮 Mathematical Model: $S_{ipi}$
 
-$$S_{IPI} = \sum_{i=1}^{16} (E_i \times N_i \times W_i) \times C_{DQR}$$
+To ensure total transparency and auditability of the **Induced Pollution Index**, the calculation follows a standardized ratio-based formula. This ensures that a T-shirt (Textile) and a Diamond (Mining) can be evaluated on the same fiscal scale, despite their vastly different absolute impacts.
 
-### Variables:
-*   **$E_i$ (Environmental Impact):** The raw value of the impact category $i$ (e.g., kg CO2 equivalent).
-*   **$N_i$ (Normalization Factor):** A factor used to scale the impact relative to the global annual impact of an average citizen.
-*   **$W_i$ (Weighting Factor):** The official EU weighting for the category (e.g., Climate Change = 21.06%).
-*   **$C_{DQR}$ (Data Quality Rating Coefficient):** A penalty or bonus based on the reliability of the data source.
+The formula implemented in [src/ipi_calculator.py](../src/ipi_calculator.py) is:
+
+$$S_{ipi} = \left( \frac{\sum_{i=1}^{16} (E_i \times W_i)}{FU \times RP_{benchmark}} \right) \times 100 \times f_{dqr}$$
+
+### 🔍 Parameter Breakdown
+
+1. **Total Weighted Impact ($\sum E_i \times W_i$):**
+   The sum of all 16 environmental impacts (Climate Change, Water, Land Use, etc.) weighted according to the [Official JRC Weighting Factors](https://eplca.jrc.ec.europa.eu).
+
+2. **Functional Unit ($FU$):**
+   The "Service Unit" delivered by the product. 
+   - *Example (Textile):* number of wears (Durability factor).
+   - *Example (Mining):* number of carat of polished diamond.
+   *Note: This penalizes obsolescence. A lower $FU$ (disposable product) mathematically inflates the final score.*
+
+3. **Representative Product Benchmark ($RP_{benchmark}$):**
+   The weighted impact of the sector's "Average Market Product" as defined by the [PEFCR](https://green-forum.ec.europa.eu). 
+   - If the product performs exactly like the market average, the ratio is $1.0$, resulting in a base score of **100**.
+
+4. **Data Quality Factor ($f_{dqr}$):**
+   A corrective multiplier based on data reliability (DQR):
+   - **Primary Data** (Verified): $1.0$ (No penalty).
+   - **Secondary Data** (Industry average): $1.2$ (+20% penalty).
+   - **Default/Expired Data**: $1.5$ (+50% penalty).
+   More info on DQR below.
+
+---
+
+## ⚖️ From Science to Fiscality
+
+Once the $S_{ipi}$ is calculated, it is passed to the [VAT Bridge](../src/vat_bridge.py) to trigger the corresponding **Tax Bin**.
+
+For example:
+
+| Calculated $S_{ipi}$ | Performance | State (Radical) VAT |
+| :--- | :--- | :--- |
+| **< 30** | Elite Circular | **0% (Super-Bonus)** |
+| **80 - 120** | Standard Market | **20% (Neutral)** |
+| **> 250** | Linear/Disposable | **150% (Prohibitive Malus)** |
+
 
 ---
 
