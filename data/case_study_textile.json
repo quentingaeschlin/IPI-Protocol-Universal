@@ -30,7 +30,7 @@
         "unit_type": "number_of_wears",
       "dqr_type": "secondary",
       "impacts": {
-        "climate_change": 5,
+        "climate_change": 4,
         "water_use": 0.6,
         "resource_use_minerals_metals": 0.0005,
         "land_use": 0.4,
