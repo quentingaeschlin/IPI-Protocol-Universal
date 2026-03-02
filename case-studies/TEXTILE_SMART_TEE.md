@@ -16,14 +16,14 @@ In 2024, a standard t-shirt from an ultra-fast fashion giant appeared cheaper be
 *   **Production:** High-water stress region, coal-powered factory.
 *   **Logistics:** Air-freight from Asia to Europe.
 *   **Data Quality:** Secondary/Generic data (No transparency).
-*   **Calculated IPI Score:** **165** (Due to the +50% **Default Penalty** for lack of primary data).
+*   **Calculated IPI Score:** **378.53** (Due to the +50% **Default Penalty** for lack of primary data).
 
 ### Product B: The "Circular-Local" T-Shirt (Low-IPI)
 *   **Material:** 50% recycled cotton / 50% organic linen.
 *   **Production:** Closed-loop water system, 100% renewable energy (EU-based).
 *   **Logistics:** Rail and electric truck delivery.
 *   **Data Quality:** Verified Primary Data on [EBSI Blockchain](https://ec.europa.eu).
-*   **Calculated IPI Score:** **55** (High-efficiency bonus).
+*   **Calculated IPI Score:** **0.77** (High-efficiency bonus).
 
 ---
 

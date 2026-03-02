@@ -16,13 +16,13 @@ Under the **IPI Protocol**, the environmental footprint is **Actor-Specific**, n
 *   **Energy Mix:** 70% Solar / 30% Grid.
 *   **Water Impact:** 90% recycling rate (Primary Data).
 *   **Logistics:** Optimized rail/sea route with carbon offsets.
-*   **Calculated IPI Score:** **65** (Well below the 100 neutral benchmark).
+*   **Calculated IPI Score:** **42.54** (Well below the 100 neutral benchmark).
 
 ### Scenario B: Global "Coal-Maximized" Competitor (Standard Impact)
 *   **Energy Mix:** 100% Coal-fired grid.
 *   **Water Impact:** Open-loop system (secondary data used).
 *   **Logistics:** High-emission air freight.
-*   **Calculated IPI Score:** **135** (High-pollution penalty).
+*   **Calculated IPI Score:** **152.26** (High-pollution penalty).
 
 ---
 
