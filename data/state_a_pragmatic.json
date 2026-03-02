@@ -1,0 +1,11 @@
+{
+  "state_name": "State A (Pragmatic)",
+  "strategy": "Soft Transition / Market Alignment",
+  "currency": "EUR",
+  "standard_vat": 0.20,
+  "tax_bins": [
+    {"threshold": 80.0, "rate": 0.055},
+    {"threshold": 120.0, "rate": 0.20},
+    {"threshold": 1000.0, "rate": 0.25}
+  ]
+}

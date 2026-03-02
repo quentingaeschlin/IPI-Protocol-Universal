@@ -8,9 +8,9 @@ def test_vat_bin_assignment():
     """
     # Custom state configuration (e.g., EU Member State 2026)
     custom_bins = [
-        {"threshold": 80, "rate": 0.055},  # Sustainable (Reduced)
-        {"threshold": 120, "rate": 0.20},  # Standard
-        {"threshold": float('inf'), "rate": 0.25} # High-Pollution (Surcharge)
+        {"threshold": 80.0, "rate": 0.055},  # Sustainable (Reduced)
+        {"threshold": 120.0, "rate": 0.20},  # Standard
+        {"threshold": 1000.0, "rate": 0.25} # High-Pollution (Surcharge)
     ]
     bridge = VATBridge(bins=custom_bins)
     

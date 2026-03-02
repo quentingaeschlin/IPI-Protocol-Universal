@@ -4,6 +4,7 @@
     "scenario_name": "STRING",
     "industry_sector": "STRING",
     "country_context": "STRING",
+    "rp_benchmark": "FLOAT",
     "date": "YYYY-MM-DD"
   },
   "products": [

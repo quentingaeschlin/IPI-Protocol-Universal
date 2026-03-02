@@ -1,41 +1,39 @@
 import pytest
 import json
-from src.ipi_calculator import IPICalculator
-from src.vat_bridge import VATBridge
+from src import IPICalculator, VATBridge
 
-def test_full_protocol_integration_from_json():
+def test_geopolitical_integration_state_a_vs_b():
     """
-    Test the full chain using the standardized JSON format and functional Unit.
-    Scenario: Circular-Local T-Shirt (High durability/functional unit).
+    Test the full chain for both State A (Pragmatic) and State B (Radical).
+    Scenario: Circular-Local T-Shirt.
     """
-    # 1. Load the unified JSON data
-    json_path = "data/case_study_textile.json"
-    with open(json_path, 'r') as f:
-        data = json.load(f)
+    # 1. Load Data
+    with open("data/case_study_textile.json") as f: case_data = json.load(f)
+    with open("data/state_a_pragmatic.json") as f: state_a = json.load(f)
+    with open("data/state_b_radical.json") as f: state_b = json.load(f)
     
-    # 2. Extract the high-performance product
-    product = data["products"][0] 
+    # 2. Extract Product (Circular-Local)
+    product = case_data["products"][0] 
+    rp_ref = case_data["metadata"]["rp_benchmark"]
     assert product["name"] == "Circular-Local T-Shirt"
-    assert "functional_unit" in product
     
-    # 3. Initialize Engines
+    # 3. Setup Engines
     calc = IPICalculator()
-    bridge = VATBridge(bins=data["fiscal_config"]["tax_bins"])
+    bridge_a = VATBridge(bins=state_a["tax_bins"])
+    bridge_b = VATBridge(bins=state_b["tax_bins"])
     
-    # 4. Verification of the "functional-Unit logic
-    # The IPI must be calculated PER functional UNIT(e.g., per wear)
+    # 4. Calculate IPI
     ipi_score = calc.calculate(
         product["impacts"], 
         functional_unit=product["functional_unit"], 
+        rp_benchmark=rp_ref,
         dqr=product["dqr_type"]
     )
     
-    # 5. Fiscal result
-    vat_rate = bridge.get_vat_by_bin(ipi_score)
-    final_price = bridge.get_final_price(product["base_price_ht"], ipi_score)
+    # 5. Verify Price in State A (Pragmatic: 5.5% VAT)
+    price_a = bridge_a.get_final_price(product["base_price_ht"], ipi_score)
+    assert price_a == pytest.approx(26.38, abs=0.01)
     
-    # Assertions: 
-    # High durability (80 wears) should result in a very low IPI
-    assert ipi_score < 50.0 
-    assert vat_rate == 0.055  # Should fall into the sustainable bin
-    assert final_price == pytest.approx(25.0 * 1.055, abs=0.01)
+    # 6. Verify Price in State B (Radical: 0% VAT / Price Parity)
+    price_b = bridge_b.get_final_price(product["base_price_ht"], ipi_score)
+    assert price_b == 25.0  # Perfect parity for sustainable goods

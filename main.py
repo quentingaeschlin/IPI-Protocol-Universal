@@ -2,49 +2,61 @@ import json
 import sys
 from src import IPICalculator, VATBridge
 
-def run_ipi_simulation(json_path: str):
+def compare_geopolitics(case_study_path: str, state_a_path: str, state_b_path: str):
     """
-    Runs a full IPI-to-VAT simulation based on a standardized JSON input file.
+    Geopolitical Comparison Engine.
+    Loads a case study and compares two different national tax policies.
     """
     try:
-        with open(json_path, 'r') as f:
-            data = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: File {json_path} not found.")
-        return
-    except json.JSONDecodeError:
-        print(f"Error: Failed to decode JSON in {json_path}.")
+        with open(case_study_path) as f: case_data = json.load(f)
+        with open(state_a_path) as f: state_a = json.load(f)
+        with open(state_b_path) as f: state_b = json.load(f)
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
         return
 
-    metadata = data.get("metadata", {})
-    print(f"\n--- IPI PROTOCOL SIMULATION: {metadata.get('scenario_name')} ---")
-    print(f"Sector: {metadata.get('industry_sector')} | Date: {metadata.get('date')}")
-    print("-" * 60)
-
-    # Initialize Engines
     calc = IPICalculator()
-    fiscal_config = data.get("fiscal_config", {})
-    # Map 'tax_bins' from JSON to the VATBridge
-    bridge = VATBridge(bins=fiscal_config.get("tax_bins"))
+    bridge_a = VATBridge(bins=state_a["tax_bins"])
+    bridge_b = VATBridge(bins=state_b["tax_bins"])
 
-    for product in data.get("products", []):
-        # 1. Calculate IPI Score
-        ipi_score = calc.calculate(product["impacts"], dqr=product["dqr_type"])
-        
-        # 2. Get Modulated VAT and Final Price
-        vat_rate = bridge.get_vat_by_bin(ipi_score)
-        final_price = bridge.get_final_price(product["base_price_ht"], ipi_score)
-        
-        # Display results per product
-        print(f"PRODUCT: {product['name']}")
-        print(f" > DQR Type: {product['dqr_type']} | IPI Score: {ipi_score}")
-        print(f" > Applied VAT: {round(vat_rate * 100, 2)}% | Final Price (TTC): €{final_price}")
-        print("-" * 30)
+    print(f"\n🌍 IPI GEOPOLITICAL COMPARISON: {case_data['metadata']['scenario_name']}")
+    print(f"Policy: {state_a['state_name']} vs {state_b['state_name']}")
+    print("=" * 95)
+    
+    header = f"{'Product Name':<25} | {'IPI':<7} | {'Net (HT)':<10} | {state_a['state_name']:<20} | {state_b['state_name']:<20}"
+    print(header)
+    print("-" * 95)
 
-    print("Simulation Complete. Protocol Verified.")
+    for prod in case_data["products"]:
+        # IPI Calculation (Normalized by Functional Unit)
+        rp_benchmark = case_data["metadata"]["rp_benchmark"]
+
+        ipi = calc.calculate(
+            prod["impacts"], 
+            functional_unit=prod["functional_unit"], 
+            rp_benchmark=rp_benchmark,
+            dqr=prod["dqr_type"]
+        )
+        
+        price_ht = prod["base_price_ht"]
+        price_a = bridge_a.get_final_price(price_ht, ipi)
+        price_b = bridge_b.get_final_price(price_ht, ipi)
+
+        print(f"{prod['name']:<25} | {ipi:<7.2f} | €{price_ht:<9} | €{price_a:<19} | €{price_b:<19}")
+
+    print("=" * 95)
+    print("Strategic Note: State B effectively neutralizes the price gap for sustainable goods.")
 
 if __name__ == "__main__":
-    # Allow running specific case studies via command line
-    # Default to textile if no argument is provided
-    target_file = sys.argv[1] if len(sys.argv) > 1 else "data/case_study_textile.json"
-    run_ipi_simulation(target_file)
+    # --- CLI ARGUMENT LOGIC ---
+    # Default paths
+    default_case = "data/case_study_textile.json"
+    default_state_a = "data/state_a_pragmatic.json"
+    default_state_b = "data/state_b_radical.json"
+
+    # Override defaults if arguments are provided via terminal
+    case_arg = sys.argv[1] if len(sys.argv) > 1 else default_case
+    state_a_arg = sys.argv[2] if len(sys.argv) > 2 else default_state_a
+    state_b_arg = sys.argv[3] if len(sys.argv) > 3 else default_state_b
+
+    compare_geopolitics(case_arg, state_a_arg, state_b_arg)

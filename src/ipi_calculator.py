@@ -52,22 +52,30 @@ class IPICalculator:
         "default": 1.5       # Missing/Expired data (+50% penalty)
     }
 
-    def calculate(self, input_impacts: Dict[str, float], functional_unit: float, dqr: str = "primary") -> float:
+    def calculate(self, input_impacts: Dict[str, float], functional_unit: float, rp_benchmark: float, dqr: str = "primary") -> float:
         """
-        Calculates IPI per Service Unit (e.g., per wear, per carat, per kWh).
-        This aligns the protocol with official EU PEFCR 'Functional Units'.
+        IPI: (Product Impact per FU / Sector Benchmark per FU) * 100
         """
         if functional_unit <= 0:
-            raise ValueError("Functional units (durability/quantity) must be greater than zero.")
+            raise ValueError("Functional unit (durability/quantity) must be greater than zero.")
+        
+        if rp_benchmark <= 0:
+            raise ValueError("RP Benchmark must be greater than zero.")
 
+        # 1. Total weighted impact (Science)
         weighted_sum = 0.0
         for cat, value in input_impacts.items():
             weight = self.WEIGHTING_FACTORS[cat]
             weighted_sum += value * (weight / 100)
 
-        # IPI = Impact per Service Rendered
-        # We normalize to 100 based on a reference service level
-        ipi_score = (weighted_sum / functional_unit) * 100 
+        # 2. Normalization by Service Rendered
+        impact_per_fu = weighted_sum / functional_unit
+
+        # 3. GLOBAL NORMALIZATION (The "Brussels" Ratio)
+        # If product = average, score = 100.
+        # If product < average (cleaner), score < 100.
+        ipi_score = (impact_per_fu / rp_benchmark) * 100 
         
+        # 4. Data Quality Penalty
         penalty = self.DQR_COEFFICIENTS.get(dqr, 1.5)
         return round(ipi_score * penalty, 2)

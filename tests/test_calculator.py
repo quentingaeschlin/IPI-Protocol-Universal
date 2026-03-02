@@ -12,7 +12,7 @@ def test_neutral_product_returns_100():
     impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
     
     # We define 1.0 functional unit(e.g., 1 wear or 1 carat)
-    assert calc.calculate(impacts, functional_unit=1.0) == pytest.approx(100.0, rel=2e-3)
+    assert calc.calculate(impacts, functional_unit=1.0, rp_benchmark=1.0) == pytest.approx(100.0, rel=2e-3)
 
 def test_durability_impact_on_score():
     """
@@ -23,8 +23,8 @@ def test_durability_impact_on_score():
     impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
     
     # Product with 1 functional_unit vs Product with 2 functional_unit
-    score_low_durability = calc.calculate(impacts, functional_unit=1.0)
-    score_high_durability = calc.calculate(impacts, functional_unit=2.0)
+    score_low_durability = calc.calculate(impacts, functional_unit=1.0, rp_benchmark=1.0)
+    score_high_durability = calc.calculate(impacts, functional_unit=2.0, rp_benchmark=1.0)
     
     # The score should be exactly half (50 vs 100)
     assert score_high_durability == pytest.approx(score_low_durability / 2, abs = 0.01)
@@ -37,8 +37,8 @@ def test_dqr_penalty_application():
     calc = IPICalculator()
     impacts = {cat: 1.0 for cat in calc.WEIGHTING_FACTORS.keys()}
     
-    score_primary = calc.calculate(impacts, functional_unit=1.0, dqr="primary")
-    score_secondary = calc.calculate(impacts, functional_unit=1.0, dqr="secondary")
+    score_primary = calc.calculate(impacts, functional_unit=1.0, rp_benchmark=1.0, dqr="primary")
+    score_secondary = calc.calculate(impacts, functional_unit=1.0, rp_benchmark=1.0, dqr="secondary")
     
     assert score_secondary == pytest.approx(score_primary * 1.2)
 
@@ -48,5 +48,5 @@ def test_invalid_functional_unit_raises_error():
     """
     calc = IPICalculator()
     impacts = {"climate_change": 10.0}
-    with pytest.raises(ValueError, match=re.escape("Functional units (durability/quantity) must be greater than zero.")):
-        calc.calculate(impacts, functional_unit=0)
+    with pytest.raises(ValueError, match=re.escape("Functional unit (durability/quantity) must be greater than zero.")):
+        calc.calculate(impacts, functional_unit=0, rp_benchmark=1.0)

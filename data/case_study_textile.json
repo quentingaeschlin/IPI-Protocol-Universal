@@ -4,6 +4,7 @@
     "scenario_name": "Smart T-Shirt Battle",
     "industry_sector": "Textile",
     "country_context": "European Union",
+    "rp_benchmark": 0.15,
     "date": "2026-03-02"
   },
   "products": [
@@ -25,11 +26,11 @@
     {
       "name": "Linear-Global T-Shirt",
       "base_price_ht": 10.0,
-        "functional_unit": 80, 
+        "functional_unit": 2, 
         "unit_type": "number_of_wears",
       "dqr_type": "secondary",
       "impacts": {
-        "climate_change": 0.8,
+        "climate_change": 5,
         "water_use": 0.6,
         "resource_use_minerals_metals": 0.0005,
         "land_use": 0.4,

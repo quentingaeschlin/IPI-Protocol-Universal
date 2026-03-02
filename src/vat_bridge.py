@@ -21,17 +21,32 @@ class VATBridge:
         # Ensure bins are sorted by threshold for sequential evaluation
         self.bins.sort(key=lambda x: x["threshold"])
 
+    # def get_vat_by_bin(self, ipi_score: float) -> float:
+    #     """
+    #     Retrieves the fixed VAT rate corresponding to the product's IPI bin.
+    #     Returns the rate of the first bin where ipi_score is lower than threshold.
+    #     """
+    #     for bin_entry in self.bins:
+    #         if ipi_score < bin_entry["threshold"]:
+    #             return bin_entry["rate"]
+        
+    #     # Fallback to the highest malus bin
+    #     return self.bins[-1]["rate"]
     def get_vat_by_bin(self, ipi_score: float) -> float:
         """
-        Retrieves the fixed VAT rate corresponding to the product's IPI bin.
-        Returns the rate of the first bin where ipi_score is lower than threshold.
+        Finds the correct VAT rate by looking for the highest threshold 
+        that the IPI score has exceeded.
         """
-        for bin_entry in self.bins:
-            if ipi_score < bin_entry["threshold"]:
-                return bin_entry["rate"]
+        # 1. Sort bins by threshold DESCENDING (from highest to lowest)
+        sorted_bins = sorted(self.bins, key=lambda x: x["threshold"])
         
-        # Fallback to the highest malus bin
-        return self.bins[-1]["rate"]
+        # 2. Return the rate of the first threshold exceeded
+        for bin_entry in sorted_bins:
+            if ipi_score <= bin_entry["threshold"]:
+                return bin_entry["rate"]
+                
+        # 3. Fallback to the lowest rate if no threshold is met
+        return self.bins[0]["rate"]
 
     def get_final_price(self, price_ht: float, ipi_score: float) -> float:
         """

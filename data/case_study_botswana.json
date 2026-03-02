@@ -4,6 +4,7 @@
     "scenario_name": "Sustainable Diamond Mining",
     "industry_sector": "Mining",
     "country_context": "Botswana",
+    "rp_benchmark": 15.0,
     "date": "2026-03-02"
   },
   "products": [
