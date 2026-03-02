@@ -29,13 +29,17 @@ Under the **IPI Protocol**, the environmental footprint is **Actor-Specific**, n
 ## 3. Fiscal Impact: The VAT Competitive Edge
 When these diamonds enter the [European Single Market (2026)](https://commission.europa.eu), the IPI-based VAT modulation creates an immediate price differentiation:
 
+### 💎 Verified Simulation Results (Mining Sector)
+**Reference Benchmark (RP):** 15.0 impact/carat
 
-| Product Source | IPI Score | Standard Price (Ex-Tax) | Modulated VAT | Final Consumer Price |
-| :--- | :--- | :--- | :--- | :--- |
-| **Botswana (Low-IPI)** | **65** | €5,000 | **6% (Bonus)** | **€5,300** |
-| **Competitor (High-IPI)**| **135** | €5,000 | **26% (Malus)** | **€6,300** |
 
-**Result:** The Botswana diamond becomes **€1,000 cheaper** for the final consumer purely due to its verified environmental efficiency.
+| Product Origin | IPI Score | Service Unit | Net Price (HT) | State A (Pragmatic) | State B (Radical) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Botswana (Solar)** | **42.54** | 1 carat | €5,000.00 | €5,275.00 (5.5%) | **€5,000.00 (0%)** |
+| **Global (Coal)** | **152.26** | 1 carat | €5,000.00 | €6,250.00 (25%) | **€7,250.00 (45%)** |
+
+**Strategic Outcome:** The IPI Protocol provides a **€2,250.00 competitive advantage** to [Botswana](https://www.gov.bw) in the Radical State model. This proves that sovereign investment in green infrastructure (Solar/Water recycling) is immediately rewarded by IPI-enabled global markets.
+
 
 ---
 

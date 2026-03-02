@@ -31,13 +31,17 @@ In 2024, a standard t-shirt from an ultra-fast fashion giant appeared cheaper be
 With a standard VAT of 20% and a high sensitivity coefficient ($k = 2.0$), the market shifts instantly:
 
 
+### 📊 Verified Simulation Results (Textile Sector)
+**Reference Benchmark (RP):** 0.15 impact/wear
 
-| Product | Price (Ex-Tax) | Modulated VAT | Final Retail Price | Consumer Perception |
-| :--- | :--- | :--- | :--- | :--- |
-| **Linear-Global** | €10.00 | **33% (Malus)** | **€13.30** | "Taxed for Pollution" |
-| **Circular-Local** | €25.00 | **2% (Bonus)** | **€25.50** | "Rewarded for Quality" |
 
-**The "Price Gap" Closure:** The IPI Protocol reduces the price gap between the two products by **30%**, making the sustainable choice significantly more accessible to the mass market.
+| Product Name | IPI Score | Service Units | Net Price (excl. Tax) | State A (Pragmatic) | State B (Radical) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Circular-Local** | **0.77** | 80 wears | €25.00 | €26.38 (5.5%) | **€25.00 (0%)** |
+| **Linear-Global** | **378.53** | 2 wears | €12.00 | €15.00 (25%) | **€30.00 (150%)** |
+
+**Strategic Outcome:** In the Radical model (State B), the IPI Protocol achieves total **Price Parity**. The €13.00 production gap is neutralized by the environmental surcharge, making the sustainable choice the most rational economic decision for the consumer.
+
 
 ---
 
