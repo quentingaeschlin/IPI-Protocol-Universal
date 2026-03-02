@@ -84,12 +84,12 @@ Below is a simplified representation of an IPI-compliant data packet:
   "protocol_version": "1.0.0-beta",
   "metadata": {
     "rp_benchmark": 0.15,
-    "unit_type": "number_of_wears"
   },
   "product": {
     "name": "Circular T-Shirt",
     "impacts": { "climate_change": 0.3, "water_use": 0.2 },
     "functional_unit": 80,
+    "unit_type": "number_of_wears",
     "dqr_type": "primary"
   }
 }
