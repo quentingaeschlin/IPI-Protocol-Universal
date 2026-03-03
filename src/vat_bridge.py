@@ -3,7 +3,7 @@ from typing import List, Dict, Optional
 class VATBridge:
     """
     Sovereign Fiscal Engine: Modulates VAT rates using IPI Bins.
-    Allows tax authorities to set predictable thresholds for 
+    Allows tax authorities to set predictable thresholds for
     market actors and retailers.
     """
 
@@ -18,42 +18,32 @@ class VATBridge:
             {"threshold": 120.0, "rate": 0.20},   # Standard / Neutral
             {"threshold": float('inf'), "rate": 0.30} # Linear / High-Pollution
         ]
-        # Ensure bins are sorted by threshold for sequential evaluation
+        # Sort once during initialization for performance
         self.bins.sort(key=lambda x: x["threshold"])
 
-    # def get_vat_by_bin(self, ipi_score: float) -> float:
-    #     """
-    #     Retrieves the fixed VAT rate corresponding to the product's IPI bin.
-    #     Returns the rate of the first bin where ipi_score is lower than threshold.
-    #     """
-    #     for bin_entry in self.bins:
-    #         if ipi_score < bin_entry["threshold"]:
-    #             return bin_entry["rate"]
-        
-    #     # Fallback to the highest malus bin
-    #     return self.bins[-1]["rate"]
     def get_vat_by_bin(self, ipi_score: float) -> float:
         """
-        Finds the correct VAT rate by looking for the highest threshold 
+        Returns the VAT rate for the given IPI score.
+        Finds the correct VAT rate by looking for the highest threshold
         that the IPI score has exceeded.
         """
-        # 1. Sort bins by threshold DESCENDING (from highest to lowest)
-        sorted_bins = sorted(self.bins, key=lambda x: x["threshold"])
-        
-        # 2. Return the rate of the first threshold exceeded
-        for bin_entry in sorted_bins:
+        for bin_entry in self.bins:
             if ipi_score <= bin_entry["threshold"]:
                 return bin_entry["rate"]
-                
-        # 3. Fallback to the lowest rate if no threshold is met
-        return self.bins[0]["rate"]
+        return self.bins[-1]["rate"]  # Fallback to the highest malus bin
 
     def get_final_price(self, price_ht: float, ipi_score: float) -> float:
         """
         Calculates the final retail price including IPI-modulated VAT.
         Essential for POS (Point of Sale) and E-commerce integrations.
+        
+        Args:
+            price_ht (float): Price before tax (Hors Taxe).
+            ipi_score (float): IPI score of the product.
+            
+        Returns:
+            float: Final price after VAT modulation.
         """
         vat_rate = self.get_vat_by_bin(ipi_score)
         final_price = price_ht * (1 + vat_rate)
-        
         return round(final_price, 2)
