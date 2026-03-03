@@ -52,7 +52,13 @@ The [EU Carbon Border Adjustment Mechanism (CBAM)](https://taxation-customs.ec.e
 
 ---
 
-## 5. Conclusion: A Fair Global Playing Field
+## 5. Reproductibility
+You can verify these results by running:
+python -m main data/case_study_botswana.json
+
+---
+
+## 6. Conclusion: A Fair Global Playing Field
 The IPI Protocol ensures that **efficiency is the new currency**. 
 
 A miner in Gaborone using clean tech is no longer penalized by the poor practices of their global competitors. By standardizing the "Measuring Rod," the IPI turns Botswana's solar and water investments into a **permanent fiscal advantage** in the world's largest consumer markets.
