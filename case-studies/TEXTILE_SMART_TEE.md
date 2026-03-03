@@ -54,7 +54,7 @@ The IPI Protocol rewards products designed to last.
 
 ## 5. Reproductibility
 You can verify these results by running:
-python main.py --data data/case_study_textile.json
+python -m main data/case_study_textile.json
 
 ---
 
