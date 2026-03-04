@@ -1,4 +1,4 @@
-# 🤝 Contributing to the IPI Protocol (Universal)
+# 🤝 Contributing to the IPI Protocol
 
 First, thank you for taking the time to contribute! By joining **Project IPI**, you are helping build a universal, open-source infrastructure designed to make the sustainable choice the most economically viable choice for everyone.
 
