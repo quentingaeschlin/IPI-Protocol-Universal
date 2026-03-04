@@ -2,7 +2,7 @@
 
 First, thank you for taking the time to contribute! By joining **Project IPI**, you are helping build a universal, open-source infrastructure designed to make the sustainable choice the most economically viable choice for everyone.
 
-As of **March 1st, 2026**, we are in the **Bootstrap Phase**. We need expertise in three critical areas: **Environmental Science**, **Blockchain Engineering**, and **Fiscal Policy**.
+As of **March 1st, 2026**, we are in the **Bootstrap Phase**. We need expertise in three critical areas: **Computer Science**, **Environmental Science**, **Blockchain Engineering**, and **Fiscal Policy**.
 
 ---
 
