@@ -23,11 +23,5 @@
         "particulate_matter": "FLOAT"
       }
     }
-  ],
-  "fiscal_config": {
-    "standard_vat": "FLOAT",
-    "tax_bins": [
-      {"threshold": "FLOAT", "rate": "FLOAT"}
-    ]
-  }
+  ]
 }

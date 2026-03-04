@@ -1,8 +1,6 @@
 {
   "state_name": "State B (Radical)",
   "strategy": "Price Parity / Circular Accelerator",
-  "currency": "EUR",
-  "standard_vat": 0.20,
   "tax_bins": [
     {"threshold": 30.0, "rate": 0.0},
     {"threshold": 60.0, "rate": 0.055},

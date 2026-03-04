@@ -38,13 +38,5 @@
         "particulate_matter": 0.1
       }
     }
-  ],
-  "fiscal_config": {
-    "standard_vat": 0.20,
-    "tax_bins": [
-      {"threshold": 80.0, "rate": 0.055},
-      {"threshold": 110.0, "rate": 0.20},
-      {"threshold": 1000.0, "rate": 0.25}
-    ]
-  }
+  ]
 }
