@@ -1,4 +1,4 @@
-# ⚖️ IPI-Based VAT Modulation Model
+# 🌊 IPI-Based VAT Modulation Model
 ## A Framework for Sovereign Tax Authorities
 
 ### 1. The "Fiscal Factor" Logic
