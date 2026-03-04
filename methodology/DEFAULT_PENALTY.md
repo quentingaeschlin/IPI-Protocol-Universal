@@ -23,7 +23,7 @@ If a product's IPI certification expires or if a manufacturer refuses to provide
 ### 3.1. Calculation Logic
 In the current Protocol version (v1.0.0-beta), if an IPI certification expires or data is missing:
 *   **The Penalty:** A flat **+50% multiplier (1.5 coefficient)** is applied to the reference benchmark.
-*   **Future Roadmap:** Integration of a dynamic "Worst-in-Class" (90th percentile + 15%) model as more sector data becomes available in the [EU EF Database](https://eplca.jrc.ec.europa.eu).
+*   **Future Roadmap:** Integration of a dynamic "Worst-in-Class" (90th percentile + 15%) model as a PEF repository becomes available in the [EU EF Database](https://eplca.jrc.ec.europa.eu) and PEF declaration becomes mandatory.
 
 ### 3.2. Fiscal Consequence
 An expired IPI instantly shifts the product into the **highest VAT bracket** defined by the sovereign nation:
