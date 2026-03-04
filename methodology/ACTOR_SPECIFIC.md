@@ -48,4 +48,3 @@ To ensure [SME competitiveness](https://commission.europa.eu), the IPI Protocol 
 
 ## 🚀 Next Milestones
 - [ ] **Action:** Define the **DQR-Audit Protocol** for third-party verifiers.
-- [ ] **Action:** Create a JSON template for "Cluster IPI" certification for cooperatives and PME clusters.
