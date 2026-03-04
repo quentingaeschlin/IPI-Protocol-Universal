@@ -1,5 +1,5 @@
-# IPI-Based VAT Modulation Model
-## ⚖️ A Framework for Sovereign Tax Authorities
+# ⚖️ IPI-Based VAT Modulation Model
+## A Framework for Sovereign Tax Authorities
 
 ### 1. The "Fiscal Factor" Logic
 The IPI Protocol provides a standardized value where **100 is the Neutral Reference**. Governments apply a fiscal multiplier based on this score.
