@@ -30,17 +30,10 @@ The IPI is a numerical coefficient where **100 is the Neutral Reference** for a 
 *   [`/fiscal-models`](fiscal-models/): Revenue-neutral simulations for Ministry of Finance adoption.
 *   [`/case-studies`](case-studies/): Real-world simulations (Textiles, Electronics, Mining).
 
-## 🚀 Get Started
-1.  **Read the [WHITEPAPER.md](WHITEPAPER.md)** for the full economic and political argument.
-2.  **Check the [FAQ.md](FAQ.md)** to understand how we protect SME competitiveness and VAT sovereignty.
-3.  **Run the Test Engine:** 
-    ```bash
-    python tests/ipi_engine.py
-    ```
 ## 🚀 Quick Start (Demo)
 To see the IPI Protocol in action and compare a sustainable product vs. a polluting one:
 1. `pip install -r requirements.txt`
-2. `python main.py`
+2. `python -m main.py`
 
 ## 🤝 Contributing
 We need engineers, developpers, environmental scientists, blockchain architects, and tax lawyers. 
