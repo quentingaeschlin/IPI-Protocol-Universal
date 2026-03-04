@@ -58,7 +58,7 @@ Based on the [EU JRC Weighting Factors](https://green-forum.ec.europa.eu), the I
 
 ---
 
-## ⚖️ From Science to Fiscality
+## From Science to Fiscality
 
 Once the $S_{ipi}$ is calculated, it is passed to the [VAT Bridge](../src/vat_bridge.py) to trigger a sovereign **Tax Bin**. This bridge converts the environmental score into a final retail price.
 
