@@ -40,11 +40,10 @@ and state B those bins:
 
 ## 3. Simulation Example: The Textile Sector
 
-Product Name              | IPI     | Net (HT)   | Shelf Price State A (Pragmatic)  | Shelf Price State B (Radical)
-------------------------------------------------------------------------------------------------------------------------
-Circular-Local T-Shirt    | 0.77    | €25.0      | €26.38                           | €25.0
-Linear-Global T-Shirt     | 378.53  | €12.0      | €15.0                            | €30.0
-========================================================================================================================
+|Product Name              | IPI     | Net (HT)   | Shelf Price State A (Pragmatic)  | Shelf Price State B (Radical) |
+|--------------------------|---------|------------|----------------------------------|-------------------------------|
+|Circular-Local T-Shirt    | 0.77 | €25.0 | €26.38 | €25.0 |
+|Linear-Global T-Shirt     | 378.53 | €12.0 | €15.0 | €30.0 |
 
 
 **Result:** The "Gain" from the high-pollution surcharge offsets the "Cost" of the sustainable rebate. The consumer basket price remains stable, but the **market share shifts** toward the lower IPI product.
