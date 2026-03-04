@@ -15,15 +15,14 @@ Traditional Life Cycle Assessments (LCA) fail because data is siloed. A manufact
 The IPI Protocol uses a **Nested Smart Contract** logic. When a final product is created, it "calls" the IPI scores of its verified components.
 
 ### 2.1. The Tokenization of Impact
-Each semi-finished good or service is assigned a **Verifiable Credential (VC)** on the EBSI:
-*   **Supplier A (Raw Cotton):** Generates an IPI-VC of **40**.
-*   **Supplier B (Dyeing Service):** Generates an IPI-VC of **15**.
-*   **Manufacturer C (The T-Shirt):** Inherits both, adds its own process IPI (**10**).
+Each semi-finished good or service carries its **Verifiable Credential (VC)** on the EBSI:
+*   **Supplier A (Raw Cotton):** Generates an IPI-VC for the cotton.
+*   **Supplier B (Dyeing Service):** Generates an IPI-VC for the dyeing.
+*   **Manufacturer C (The T-Shirt):** Inherits both, adds its own process IPI.
 
-**Final Product IPI:** $40 + 15 + 10 = 65$.
 
 ### 2.2. Immutable Traceability
-If a supplier attempts to "greenwash" their data post-transaction, the [EBSI Ledger](https://digital-strategy.ec.europa.eu) maintains the history. Any discrepancy triggers an automatic **Audit Flag** in the [Digital Product Passport (DPP)](https://commission.europa.eu).
+If a supplier attempts to "greenwash" their data, the [EBSI Ledger](https://digital-strategy.ec.europa.eu) would maintain the history.
 
 ---
 
@@ -32,15 +31,15 @@ To enable **Smart VAT Modulation**, the blockchain connects directly to the [VAT
 
 1.  **Point of Sale (POS):** The retailer scans the product's QR code (DPP).
 2.  **API Call:** The system queries the EBSI to verify the IPI's authenticity.
-3.  **Real-Time Calculation:** The tax engine applies the **IPI Coefficient** to the standard VAT rate.
-4.  **Settlement:** The modulated VAT is recorded, and the "Bonus/Malus" is settled in the national green fund.
+3.  **Real-Time Calculation:** The tax engine applies the **IPI Coefficient** and returns the applicable tax bin.
+4.  **Settlement:** The modulated applicable VAT is returned.
 
 ---
 
 ## 4. Security & Privacy (The "Zero-Knowledge" Approach)
 We protect industrial secrets while ensuring transparency:
 *   **Public IPI:** The final score is public.
-*   **Private Inputs:** The specific supply chain details are encrypted. Only the **Total Aggregated IPI** is visible to the consumer and tax authorities, protecting the manufacturer's competitive recipe.
+*   **Private Inputs:** The specific supply chain details are encrypted. Only the **Total Aggregated IPI** is visible to the consumers, protecting the manufacturer's competitive recipe.
 
 ---
 
@@ -50,4 +49,4 @@ We protect industrial secrets while ensuring transparency:
 *   **Interoperability:** Designed to communicate with the [Digital Product Passport (DPP)](https://commission.europa.eu) across all 27 Member States.
 
 ---
-- [ ]  **Action:** Implement the first **Solidity/Rust prototype** for the IPI-Inheritance contract in `/Technical-Stack/contracts/`.
+- [ ]  **Action:** Implement the first **prototype** for the IPI-Inheritance contract in `/Technical-Stack/contracts/`.
