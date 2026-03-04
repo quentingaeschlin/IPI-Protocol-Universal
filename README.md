@@ -4,12 +4,12 @@
 
 ---
 
-## 💎 The Vision
+## The Vision
 **Project IPI** is an open-source initiative designed to solve the fundamental market failure of our era: the externalization of environmental costs. 
 
 By bridging the gap between scientific **Product Environmental Footprints (PEF)** and national **Value Added Tax (VAT)** systems, we make the sustainable choice the most economically viable choice for consumers and corporations alike.
 
-## 🏗 The 2026 Ecosystem Integration
+## The 2026 Ecosystem Integration
 The IPI Protocol is built to run on the mandatory infrastructure of the European Single Market, but is designed for **Universal adoption** (from the EU to Botswana):
 
 1.  **Scientific Engine:** Powered by [EU PEF EF 4.0](https://green-forum.ec.europa.eu).
@@ -17,14 +17,14 @@ The IPI Protocol is built to run on the mandatory infrastructure of the European
 3.  **Trust Infrastructure:** Immutable supply-chain inheritance via [EBSI Blockchain](https://ec.europa.eu).
 4.  **Interface:** Machine-readable data delivered via the [Digital Product Passport (DPP)](https://commission.europa.eu).
 
-## 📊 How It Works: The "Measuring Rod"
+## How It Works: The "Measuring Rod"
 The IPI is a numerical coefficient where **100 is the Neutral Reference** for a product category.
 *   **Actor-Specific:** Unlike generic labels, the IPI rewards specific supply chain choices (e.g., solar energy, rail transport).
 *   **Fiscal Bridge:** Sovereign nations leverage the IPI to modulate VAT.
     *   **IPI < 80:** Super-reduced VAT (Bonus).
     *   **IPI > 120:** Pollution Surcharge (Malus).
 
-## 📂 Repository Structure
+## Repository Structure
 *   [`/methodology`](methodology/): The algorithm converting 16 PEF indicators into a single IPI score.
 *   [`/technical-stack`](technical-stack/): Smart contracts for EBSI and API definitions for DPP.
 *   [`/fiscal-models`](fiscal-models/): Revenue-neutral simulations for Ministry of Finance adoption.
@@ -35,7 +35,7 @@ To see the IPI Protocol in action and compare a sustainable product vs. a pollut
 1. `pip install -r requirements.txt`
 2. `python -m main.py`
 
-## 🤝 Contributing
+## Contributing
 We need engineers, developpers, environmental scientists, blockchain architects, and tax lawyers. 
 Please review our [CONTRIBUTING.md](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
