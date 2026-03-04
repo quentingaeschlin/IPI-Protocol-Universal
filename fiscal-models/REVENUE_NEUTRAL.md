@@ -18,35 +18,37 @@ To ensure the national budget remains stable ($ΔR = 0$), the total tax revenue 
 $$\sum (Sales_{i} \times Price_{i} \times VAT_{standard}) = \sum (Sales_{i} \times Price_{i} \times VAT_{modulated(IPI)})$$
 
 ### Variable Adjustment (The Taxation Bins)
-Each government sets its own **Taxation Bins** to determine how aggressively the IPI affects the VAT rate. They can vary their bins and or thresholds at their own will. 
+Each government sets its own **Taxation Bins** to determine how aggressively the IPI affects the VAT rate. They can vary their bins and or thresholds at their own will. For example:
 
-for example state A applies those bins:
+**State A** applies those bins:
+|IPI threshold | VAT rate |
+|:---|:---|
+|80.0|0.055|
+|120.0|0.2|
+|1000.0|0.25|
 
-* ipi threshold: 80.0, vat rate: 0.055
-* ipi threshold: 120.0, vat rate: 0.2
-* ipi threshold: 1000.0, vat rate: 0.25
-
-and state B those bins:
-
-* ipi threshold: 30.0, vat rate: 0.0
-* ipi threshold: 60.0, vat rate: 0.055
-* ipi threshold: 90.0, vat rate: 0.12
-* ipi threshold: 120.0, vat rate: 0.2
-* ipi threshold: 180.0, vat rate: 0.45
-* ipi threshold: 250.0, vat rate: 0.9
-* ipi threshold: 1000.0, vat rate: 1.5
+**State B** applies those bins:
+|IPI threshold | VAT rate |
+|:---|:---|
+|30.0|0.0|
+|60.0|0.055|
+|90.0|0.12|
+|120.0|0.2|
+|180.0|0.45|
+|250.0|0.9|
+|1000.0|1.5|
 
 ---
 
 ## 3. Simulation Example: The Textile Sector
 
 |Product Name              | IPI     | Net (HT)   | Shelf Price State A (Pragmatic)  | Shelf Price State B (Radical) |
-|--------------------------|---------|------------|----------------------------------|-------------------------------|
+|:---|:---|:---|:---|:---|
 |Circular-Local T-Shirt    | 0.77 | €25.0 | €26.38 | €25.0 |
 |Linear-Global T-Shirt     | 378.53 | €12.0 | €15.0 | €30.0 |
 
 
-**Result:** The "Gain" from the high-pollution surcharge offsets the "Cost" of the sustainable rebate. The consumer basket price remains stable, but the **market share shifts** toward the lower IPI product.
+**Result:** The "Gain" from the high-pollution surcharge offsets the "Cost" of the sustainable tax rebate. The **market share shifts** toward the lower IPI product.
 
 ---
 
