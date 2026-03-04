@@ -22,21 +22,19 @@ Each government sets its own **Taxation Bins** to determine how aggressively the
 
 for example state A applies those bins:
 
-Tax Bins: State A (Pragmatic)
-ipi threshold: 80.0, vat rate: 0.055
-ipi threshold: 120.0, vat rate: 0.2
-ipi threshold: 1000.0, vat rate: 0.25
+* ipi threshold: 80.0, vat rate: 0.055
+* ipi threshold: 120.0, vat rate: 0.2
+* ipi threshold: 1000.0, vat rate: 0.25
 
 and state B those bins:
 
-Tax Bins: State B (Radical)
-ipi threshold: 30.0, vat rate: 0.0
-ipi threshold: 60.0, vat rate: 0.055
-ipi threshold: 90.0, vat rate: 0.12
-ipi threshold: 120.0, vat rate: 0.2
-ipi threshold: 180.0, vat rate: 0.45
-ipi threshold: 250.0, vat rate: 0.9
-ipi threshold: 1000.0, vat rate: 1.5
+* ipi threshold: 30.0, vat rate: 0.0
+* ipi threshold: 60.0, vat rate: 0.055
+* ipi threshold: 90.0, vat rate: 0.12
+* ipi threshold: 120.0, vat rate: 0.2
+* ipi threshold: 180.0, vat rate: 0.45
+* ipi threshold: 250.0, vat rate: 0.9
+* ipi threshold: 1000.0, vat rate: 1.5
 
 ---
 
