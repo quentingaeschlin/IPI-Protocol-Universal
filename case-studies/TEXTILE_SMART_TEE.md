@@ -31,7 +31,7 @@ In 2024, a standard t-shirt from an ultra-fast fashion giant appeared cheaper be
 With a standard VAT of 20% and a high sensitivity coefficient ($k = 2.0$), the market shifts instantly:
 
 
-### 📊 Verified Simulation Results (Textile Sector)
+### Verified Simulation Results (Textile Sector)
 **Reference Benchmark (RP):** 0.15 impact/wear
 
 
