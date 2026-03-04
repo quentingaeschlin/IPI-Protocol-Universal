@@ -35,7 +35,7 @@ The IPI Score ($S_{IPI}$) is heavily influenced by the **Data Quality Rating (DQ
 ## 4. Supply Chain Aggregation (The "IPI Multiplier")
 Because the IPI is inherited through the supply chain, choosing "Actor-Specific" suppliers has a multiplier effect:
 *   If a manufacturer chooses 5 suppliers with **Verified Primary IPIs**, the final product's uncertainty is near zero.
-*   The final **Digital Product Passport (DPP)** displays a "Gold Trust Level," making it more attractive to institutional buyers and conscious consumers.
+*   The final **Digital Product Passport (DPP)** displays a verified PEF making it more attractive to institutional buyers and on the shelf, to conscious consumers.
 
 ---
 
