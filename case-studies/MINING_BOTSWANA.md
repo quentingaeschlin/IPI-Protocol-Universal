@@ -53,7 +53,7 @@ The [EU Carbon Border Adjustment Mechanism (CBAM)](https://taxation-customs.ec.e
 ---
 
 ## 5. Reproductibility
-You can verify these results by running:
+You can verify these results by running:  
 python -m main data/case_study_botswana.json
 
 ---
