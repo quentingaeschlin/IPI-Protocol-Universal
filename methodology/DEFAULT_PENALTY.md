@@ -37,7 +37,6 @@ To remove the Default Penalty, the actor must:
 1.  Submit a new **Primary Data** audit.
 2.  Have the data verified by an authorized [CE Marking Notified Body](https://single-market-economy.ec.europa.eu).
 3.  Anchor the new **Verifiable Credential** on the blockchain.
-*The VAT rate is updated in the national tax system within 24 hours of the new block confirmation.*
 
 ---
 
