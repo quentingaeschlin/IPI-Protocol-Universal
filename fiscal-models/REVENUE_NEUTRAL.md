@@ -40,7 +40,7 @@ and state B those bins:
 ---
 
 ## 4. Addressing Social Justice (Equity Protections)
-The protocol naturally induces **The "Localism Dividend":** Since local products naturally have lower transport IPIs, they become more affordable for lower-income households compared to high-impact imports.
+The protocol naturally induces the **"Localism Dividend":** Since local products naturally have lower transport IPIs, they become more affordable for lower-income households compared to high-impact imports.
 
 To prevent the IPI from becoming a "tax on the poor," the protocol recommends:
 **An Exception List:** first necessity high-IPI goods could be set on a justified exception list to be renewed periodically.
