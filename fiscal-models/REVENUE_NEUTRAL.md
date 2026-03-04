@@ -18,7 +18,8 @@ To ensure the national budget remains stable ($ΔR = 0$), the total tax revenue 
 $$\sum (Sales_{i} \times Price_{i} \times VAT_{standard}) = \sum (Sales_{i} \times Price_{i} \times VAT_{modulated(IPI)})$$
 
 ### Variable Adjustment (The Taxation Bins)
-Each government sets its own **Taxation Bins** to determine how aggressively the IPI affects the VAT rate. They can vary their bins and or thresholds at their own will. For example:
+Each government sets its own **Taxation Bins** to determine how aggressively the IPI affects the VAT rate.  
+To manage tax revenue, government can either vary their bins or their thresholds at their own will. For example:
 
 **State A** applies those bins:
 |IPI threshold | VAT rate |
@@ -48,15 +49,17 @@ Each government sets its own **Taxation Bins** to determine how aggressively the
 |Linear-Global T-Shirt     | 378.53 | €12.0 | €15.0 | €30.0 |
 
 
-**Result:** The "Gain" from the high-pollution surcharge offsets the "Cost" of the sustainable tax rebate. The **market share shifts** toward the lower IPI product.
+**Result:** The "Gain" from the high-pollution surcharge offsets the "Cost" of the sustainable tax rebate.  
+The **market share shifts** toward the lower IPI product.
 
 ---
 
 ## 4. Addressing Social Justice (Equity Protections)
-The protocol naturally induces the **"Localism Dividend":** Since local products naturally have lower transport IPIs, they become more affordable for lower-income households compared to high-impact imports.
+The protocol naturally induces the **"Localism Dividend":**  
+Since local products naturally have lower transport IPIs, they become more affordable for lower-income households compared to high-impact imports.
 
-To prevent the IPI from becoming a "tax on the poor," the protocol recommends:
-**An Exception List:** first necessity high-IPI goods could be set on a justified exception list to be renewed periodically.
+To prevent the IPI from becoming a "tax on the poor," the protocol recommends:  
+**An Exception List:** first necessity high-IPI goods could be set on a *justified* exception list to be renewed periodically.
 
 ---
 
