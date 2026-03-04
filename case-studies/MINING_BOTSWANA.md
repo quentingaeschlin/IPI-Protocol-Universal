@@ -29,7 +29,7 @@ Under the **IPI Protocol**, the environmental footprint is **Actor-Specific**, n
 ## 3. Fiscal Impact: The VAT Competitive Edge
 When these diamonds enter the [European Single Market (2026)](https://commission.europa.eu), the IPI-based VAT modulation creates an immediate price differentiation:
 
-### 💎 Verified Simulation Results (Mining Sector)
+### Verified Simulation Results (Mining Sector)
 **Reference Benchmark (RP):** 15.0 impact/carat
 
 
