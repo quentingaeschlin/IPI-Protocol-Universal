@@ -8,17 +8,17 @@ As of **March 1st, 2026**, we are in the **Bootstrap Phase**. We need expertise 
 
 ## 1. How You Can Help
 
-### 🧪 Science & Methodology (`/Methodology`)
+### Science & Methodology (`/Methodology`)
 - **Impact Weighting:** Help us refine the aggregation of the 16 PEF categories into the single IPI score.
 - **Data Quality:** Review the **DQR (Data Quality Rating)** coefficients to ensure they effectively penalize greenwashing.
 - **Sector Mapping:** Contribute to specific **PEFCR** (Category Rules) mappings for new industries (e.g., Electronics, Food, Automotive).
 
-### 💻 Technology & Engineering (`/Technical-Stack`)
+### Technology & Engineering (`/Technical-Stack`)
 - **Blockchain:** Develop Smart Contracts for the **EBSI** (European Blockchain Services Infrastructure) to handle automated IPI inheritance.
 - **Interoperability:** Build JSON-LD schemas and API definitions for the **Digital Product Passport (DPP)**.
 - **Integrations:** Create "VAT-IPI Bridge" prototypes for existing ERP and POS (Point of Sale) systems.
 
-### ⚖️ Economics & Policy (`/Fiscal-Models`)
+### Economics & Policy (`/Fiscal-Models`)
 - **Revenue Neutrality:** Run simulations to ensure **Bonus-Malus** models remain budget-neutral for sovereign nations.
 - **Social Justice:** Propose mechanisms to protect low-income households from price spikes on essentials.
 - **Legal Frameworks:** Draft legislative templates for **VAT Modulation** based on the IPI "Measuring Rod."
