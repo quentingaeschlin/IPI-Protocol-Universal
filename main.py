@@ -2,9 +2,9 @@ import json
 import sys
 from src import IPICalculator, VATBridge
 
-def compare_geopolitics(case_study_path: str, state_a_path: str, state_b_path: str):
+def compare_tax_models(case_study_path: str, state_a_path: str, state_b_path: str):
     """
-    Geopolitical Comparison Engine.
+    Tax Models Comparison Engine.
     Loads a case study and compares two different national tax policies.
     """
     try:
@@ -19,13 +19,21 @@ def compare_geopolitics(case_study_path: str, state_a_path: str, state_b_path: s
     bridge_a = VATBridge(bins=state_a["tax_bins"])
     bridge_b = VATBridge(bins=state_b["tax_bins"])
 
-    print(f"\n🌍 IPI GEOPOLITICAL COMPARISON: {case_data['metadata']['scenario_name']}")
-    print(f"Policy: {state_a['state_name']} vs {state_b['state_name']}")
-    print("=" * 95)
-    
-    header = f"{'Product Name':<25} | {'IPI':<7} | {'Net (HT)':<10} | {state_a['state_name']:<20} | {state_b['state_name']:<20}"
+    print(f"\n🌍 IPI TAX MODELS COMPARISON: {case_data['metadata']['scenario_name']}")
+    print("\n")
+    print(f"Tax Bins: {state_a['state_name']}")
+    for item in state_a["tax_bins"]:
+        print(item)
+    print("\nvs\n")
+
+    print(f"Tax Bins: {state_b['state_name']}")
+    for item in state_b["tax_bins"]:
+        print(item)
+    print("\nResults:")
+
+    header = f"{'Product Name':<25} | {'IPI':<7} | {'Net (HT)':<10} | Shelf Price {state_a['state_name']:<20} | Shelf Price {state_b['state_name']:<18}"
     print(header)
-    print("-" * 95)
+    print("-" * 120)
 
     for prod in case_data["products"]:
         # IPI Calculation (Normalized by Functional Unit)
@@ -42,10 +50,9 @@ def compare_geopolitics(case_study_path: str, state_a_path: str, state_b_path: s
         price_a = bridge_a.get_final_price(price_ht, ipi)
         price_b = bridge_b.get_final_price(price_ht, ipi)
 
-        print(f"{prod['name']:<25} | {ipi:<7.2f} | €{price_ht:<9} | €{price_a:<19} | €{price_b:<19}")
-
-    print("=" * 95)
-    print("Strategic Note: State B effectively neutralizes the price gap for sustainable goods.")
+        print(f"{prod['name']:<25} | {ipi:<7.2f} | €{price_ht:<9} | €{price_a:<31} | €{price_b:<31}")
+    print("="*120)
+    print("Strategic Note: State B taxation models aggressively promotes sustainable goods.")
 
 if __name__ == "__main__":
     # --- CLI ARGUMENT LOGIC ---
@@ -59,4 +66,4 @@ if __name__ == "__main__":
     state_a_arg = sys.argv[2] if len(sys.argv) > 2 else default_state_a
     state_b_arg = sys.argv[3] if len(sys.argv) > 3 else default_state_b
 
-    compare_geopolitics(case_arg, state_a_arg, state_b_arg)
+    compare_tax_models(case_arg, state_a_arg, state_b_arg)

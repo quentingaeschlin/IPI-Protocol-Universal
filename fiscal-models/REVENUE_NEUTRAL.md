@@ -22,17 +22,31 @@ Each government sets its own **Taxation Bins** to determine how aggressively the
 
 for example state A applies those bins:
 
-**PROVIDE EXAMPLE TABLE**
+Tax Bins: State A (Pragmatic)
+ipi threshold: 80.0, vat rate: 0.055
+ipi threshold: 120.0, vat rate: 0.2
+ipi threshold: 1000.0, vat rate: 0.25
 
 and state B those bins:
 
-**PROVIDE EXAMPLE TABLE**
+Tax Bins: State B (Radical)
+ipi threshold: 30.0, vat rate: 0.0
+ipi threshold: 60.0, vat rate: 0.055
+ipi threshold: 90.0, vat rate: 0.12
+ipi threshold: 120.0, vat rate: 0.2
+ipi threshold: 180.0, vat rate: 0.45
+ipi threshold: 250.0, vat rate: 0.9
+ipi threshold: 1000.0, vat rate: 1.5
 
 ---
 
 ## 3. Simulation Example: The Textile Sector
 
-**PROVIDE EXAMPLE TABLE**
+Product Name              | IPI     | Net (HT)   | Shelf Price State A (Pragmatic)  | Shelf Price State B (Radical)
+------------------------------------------------------------------------------------------------------------------------
+Circular-Local T-Shirt    | 0.77    | €25.0      | €26.38                           | €25.0
+Linear-Global T-Shirt     | 378.53  | €12.0      | €15.0                            | €30.0
+========================================================================================================================
 
 
 **Result:** The "Gain" from the high-pollution surcharge offsets the "Cost" of the sustainable rebate. The consumer basket price remains stable, but the **market share shifts** toward the lower IPI product.
