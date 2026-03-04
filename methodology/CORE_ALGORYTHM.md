@@ -62,14 +62,17 @@ Based on the [EU JRC Weighting Factors](https://green-forum.ec.europa.eu), the I
 
 Once the $S_{ipi}$ is calculated, it is passed to the [VAT Bridge](../src/vat_bridge.py) to trigger a sovereign **Tax Bin**. This bridge converts the environmental score into a final retail price.
 
-### Simulation Example (State B - Radical):
+### Tax Bin Example (State B - Radical):
 
-
-| Calculated $S_{ipi}$ | Performance | Applied VAT Rate |
-| :--- | :--- | :--- |
-| **< 30** | Elite Circular | **0% (Super-Bonus)** |
-| **80 - 120** | Standard Market | **20% (Neutral)** |
-| **> 250** | Linear/Disposable | **150% (Prohibitive Malus)** |
+|IPI threshold | VAT rate |
+|:---|:---|
+|30.0|0.0|
+|60.0|0.055|
+|90.0|0.12|
+|120.0|0.2|
+|180.0|0.45|
+|250.0|0.9|
+|1000.0|1.5|
 
 ---
 
