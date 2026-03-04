@@ -48,4 +48,4 @@ As of **March 1st, 2026**, we are in the **Bootstrap Phase**. We need expertise 
 For major architectural changes or new feature proposals, please open a thread in the [GitHub Discussions](https://github.com/quentingaeschlin/IPI-Protocol-Universal/discussions/landing) tab. 
 
 ---
-**Thank you for helping us code the future of the global economy.** 🌍✨
+**Thank you for helping us code the future of the global economy.** ✨
