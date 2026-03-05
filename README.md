@@ -12,10 +12,10 @@ By bridging the gap between scientific **Product Environmental Footprints (PEF)*
 ## The 2026 Ecosystem Integration
 The IPI Protocol is built to run on the mandatory infrastructure of the European Single Market, but is designed for **Universal adoption** (from the EU to Botswana):
 
-1.  **Scientific Engine:** Powered by [EU PEF EF 4.0](https://green-forum.ec.europa.eu).
-2.  **Legal Mandate:** Integrated into the **CE Marking** via the [Ecodesign Regulation (ESPR)](https://green-forum.ec.europa.eu).
-3.  **Trust Infrastructure:** Immutable supply-chain inheritance via [EBSI Blockchain](https://ec.europa.eu).
-4.  **Interface:** Machine-readable data delivered via the [Digital Product Passport (DPP)](https://commission.europa.eu).
+1.  **Scientific Engine:** Powered by [EU PEF EF 4.0](https://green-forum.ec.europa.eu/green-business/environmental-footprint-methods/pef-method_en).
+2.  **Legal Mandate:** Integrated into the **CE Marking** via the [Ecodesign Regulation (ESPR)](http://data.europa.eu/eli/reg/2024/1781/oj).
+3.  **Trust Infrastructure:** Immutable supply-chain inheritance via [EBSI Blockchain](https://digital-strategy.ec.europa.eu/en/policies/european-blockchain-services-infrastructure).
+4.  **Interface:** Machine-readable data delivered via the [Digital Product Passport (DPP)](https://data.europa.eu/en/news-events/news/eus-digital-product-passport-advancing-transparency-and-sustainability).
 
 ## How It Works: The "Measuring Rod"
 The IPI is a numerical coefficient where **100 is the Neutral Reference** for a product category.
