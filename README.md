@@ -28,20 +28,21 @@ The IPI is a numerical coefficient where **100 is the Neutral Reference** for a 
     *   **IPI > 120:** Pollution Surcharge (Malus).
 
 ## Repository Structure
-*   ['WHITEPAPER.md'](WHITEPAPER.md) : The whitepaper explaining the concept.
+*   ['WHITEPAPER.md'](WHITEPAPER.md) : The concept explained in more details.
+*   ['FAQ.md'](FAQ.md) : A few first questions answered.
 *   [`/methodology`](methodology/): The algorithm converting 16 PEF indicators into a single IPI score.
 *   [`/technical-stack`](technical-stack/): Smart contracts for EBSI and API definitions for DPP.
 *   [`/fiscal-models`](fiscal-models/): Revenue-neutral simulations for Ministry of Finance adoption.
 *   [`/case-studies`](case-studies/): Real-world simulations (Textiles, Electronics, Mining).
 
 ## 🚀 Quick Start (Demo)
-Read the whitepaper ['WHITEPAPER.md'](WHITEPAPER.md)  
+Read the whitepaper ['WHITEPAPER.md'](WHITEPAPER.md), the ['FAQ.md'](FAQ.md).  
 See the IPI Protocol in action and compare a sustainable product vs. a polluting one:
 1. `pip install -r requirements.txt`
 2. `python -m main.py`
 
 ## Contributing
-We need solutions architects, developpers, environmental scientists, blockchain architects, and tax lawyers. 
+We need solutions architects, developpers, environmental scientists, blockchain architects, and tax lawyers.  
 Please review our [CONTRIBUTING.md](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
