@@ -34,7 +34,7 @@ The IPI is a numerical coefficient where **100 is the Neutral Reference** for a 
 *   [`/case-studies`](case-studies/): Real-world simulations (Textiles, Electronics, Mining).
 
 ## 🚀 Quick Start (Demo)
-Read the whitepaper ['WHITEPAPER.md'](WHITEPAPER.md)
+Read the whitepaper ['WHITEPAPER.md'](WHITEPAPER.md)  
 See the IPI Protocol in action and compare a sustainable product vs. a polluting one:
 1. `pip install -r requirements.txt`
 2. `python -m main.py`
