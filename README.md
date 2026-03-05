@@ -4,6 +4,8 @@
 
 ---
 
+Imagine you are walking in a dense forest on a moonless night. You fail to find the path to the clearing. Then, for an instant, a thunder strikes and in that instant of clarity, you see a path that could lead to where you want to go. That strike is the IPI Protocol. 
+
 ## The Vision
 **Project IPI** is an open-source initiative designed to solve the fundamental market failure of our era: the externalization of environmental costs. 
 
