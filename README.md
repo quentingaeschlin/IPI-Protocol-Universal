@@ -46,4 +46,4 @@ Please review our [CONTRIBUTING.md](CONTRIBUTING.md) and [Code of Conduct](CODE_
 ---
 *"The era of voluntary green claims is over. The era of verified fiscal accountability begins today."*
 
-[⭐ Star this repo to signal the European Commission that Smart Taxation is ready.](https://github.com/quentingaeschlin/IPI-Protocol-Universal/)
+[⭐ Star this repo to signal the world that Smart Taxation is ready.](https://github.com/quentingaeschlin/IPI-Protocol-Universal/)
