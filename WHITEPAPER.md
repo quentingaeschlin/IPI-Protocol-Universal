@@ -74,7 +74,7 @@ The IPI is **Universal**.
 
 ## 7. The "Default Penalty" & Data Integrity
 To prevent stagnation:
-*   **Expiration:** IPI certifications should be refreshed via the [Digital Product Passport (DPP)](https://commission.europa.eu).
+*   **Expiration:** IPI certifications should be refreshed via the [Digital Product Passport (DPP)](https://data.europa.eu/en/news-events/news/eus-digital-product-passport-advancing-transparency-and-sustainability).
 *   **The Penalty:** If an actor fails to provide specific primary data, the system automatically assigns the **"Worst-In-Class" IPI** for that category, incentivizing transparency.
 
 ---
