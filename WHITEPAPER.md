@@ -24,7 +24,7 @@ In the current market, "green" products are often more expensive due to higher p
 The **Induced Pollution Index (IPI)** is a single, normalized numerical score assigned to every product, process, or service.
 
 ### 3.1. Scientific Foundation: The PEF Engine
-The IPI is built on the [EU Product Environmental Footprint (PEF) EF 4.0](https://green-forum.ec.europa.eu). It aggregates 16 environmental impact categories into one score:
+The IPI is built on the [EU Product Environmental Footprint (PEF) EF 4.0](https://green-forum.ec.europa.eu/green-business/environmental-footprint-methods/pef-method_en). It aggregates 16 environmental impact categories into one score:
 *   Climate Change (Carbon Footprint)
 *   Water Consumption & Scarcity
 *   Resource Depletion (Minerals and Fossils)
@@ -42,10 +42,10 @@ An IPI of **100** represents the average environmental impact of a product categ
 The IPI Protocol is not a "self-declaration" tool. It relies on the **2026 EU Regulatory Stack**:
 
 ### 4.1. The CE Mark Integration
-Under the [Ecodesign for Sustainable Products Regulation (ESPR)](https://green-forum.ec.europa.eu), the IPI could become a mandatory "Environmental Module" for **CE Marking**. No product would be able to enter the Market without a verified IPI.
+Under the [Ecodesign for Sustainable Products Regulation (ESPR)](http://data.europa.eu/eli/reg/2024/1781/oj), the IPI could become a mandatory "Environmental Module" for **CE Marking**. No product would be able to enter the Market without a verified IPI.
 
 ### 4.2. Blockchain Inheritance (EBSI)
-Using the [European Blockchain Services Infrastructure (EBSI)](https://ec.europa.eu), the IPI is calculated through **Supply Chain Inheritance**:
+Using the [European Blockchain Services Infrastructure (EBSI)](https://digital-strategy.ec.europa.eu/en/policies/european-blockchain-services-infrastructure), the IPI is calculated through **Supply Chain Inheritance**:
 1.  Raw material suppliers log their specific IPI on the blockchain.
 2.  Manufacturers "inherit" these scores automatically.
 3.  The final product IPI is an immutable aggregation of the entire lifecycle.
