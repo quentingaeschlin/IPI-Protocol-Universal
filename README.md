@@ -42,7 +42,7 @@ See the IPI Protocol in action and compare a sustainable product vs. a polluting
 2. `python -m main.py`
 
 ## Contributing
-We need solutions architects, developpers, environmental scientists, blockchain architects, and tax lawyers.  
+We need solutions architects, developpers, environmental scientists, blockchain architects, ai tokens and tax lawyers.  
 Please review our [CONTRIBUTING.md](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
